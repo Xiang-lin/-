@@ -9,7 +9,11 @@ import "styles/reset.css";
 import "styles/iconfont.css";
 // 三秒延迟
 import Fastclick from "fastclick";
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+
 Fastclick.attach(document.body);
+Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false;
 

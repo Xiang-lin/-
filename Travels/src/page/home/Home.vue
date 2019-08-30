@@ -1,18 +1,22 @@
 <template>
   <div class="hello">
     <Header></Header>
+    <Swiper></Swiper>
   </div>
 </template>
 
 <script>
-import Header from "./components/Header.vue";
+import Header from "./components/Header";
+import Swiper from "./components/Swiper";
+
 export default {
-  name: "HelloWorld",
+  name: "hello",
   data() {
     return {};
   },
   components: {
-    Header
+    Header,
+    Swiper
   }
 };
 </script>
