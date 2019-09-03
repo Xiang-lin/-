@@ -30,37 +30,30 @@ export default {
         {
           id: "0002",
           imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1412/79/522273acf9c21ad5083144b4985771df.water.jpg_200x200_b604ba19.jpg",
-          title: "西溪国家湿地公园·周家村",
-          desc: "美若仙境，《非诚勿扰》取景地"
+            "http://img1.qunarzz.com/sight/p0/1901/8c/8c1d317bc954ce06a3.water.jpg_200x200_94fd133d.jpg",
+          title: "宋城千古情",
+          desc: "世界三大名秀之一，杭州宋城的灵魂"
         },
         {
           id: "0003",
           imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1412/79/522273acf9c21ad5083144b4985771df.water.jpg_200x200_b604ba19.jpg",
-          title: "西溪国家湿地公园·周家村",
-          desc: "美若仙境，《非诚勿扰》取景地"
+            "http://img1.qunarzz.com/sight/p0/1901/60/601b17dc97036e67a3.water.jpg_200x200_fc8a796c.jpg",
+          title: "杭州烂苹果乐园",
+          desc: "烂苹果乐园"
         },
         {
           id: "0004",
           imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1412/79/522273acf9c21ad5083144b4985771df.water.jpg_200x200_b604ba19.jpg",
-          title: "西溪国家湿地公园·周家村",
-          desc: "美若仙境，《非诚勿扰》取景地"
+            "http://img1.qunarzz.com/sight/p0/1603/e6/e646f4221574cc2a90.water.jpg_200x200_d9b6cabd.jpg",
+          title: "双溪漂流",
+          desc: "江南惊险漂流，水清、竹多、落差大"
         },
         {
           id: "0005",
           imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1412/79/522273acf9c21ad5083144b4985771df.water.jpg_200x200_b604ba19.jpg",
-          title: "西溪国家湿地公园·周家村",
-          desc: "美若仙境，《非诚勿扰》取景地"
-        },
-        {
-          id: "0006",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1412/79/522273acf9c21ad5083144b4985771df.water.jpg_200x200_b604ba19.jpg",
-          title: "西溪国家湿地公园·周家村",
-          desc: "美若仙境，《非诚勿扰》取景地"
+            "http://img1.qunarzz.com/sight/p0/1904/e3/e3df2462a8a8876fa3.water.jpg_200x200_2e9e4fe3.jpg",
+          title: "杭州长乔极地海洋公园",
+          desc: "海洋公园"
         }
       ]
     };
