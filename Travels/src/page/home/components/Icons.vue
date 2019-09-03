@@ -122,8 +122,7 @@ export default {
     height: 0 !important
   .swiper-pagination
     position: absolute
-    bottom: -0.4rem
-    padding: 0 6px
+    bottom: -0.45rem
     width: 100%
     text-align: center
   .swiper-icon
