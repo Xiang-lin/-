@@ -17,53 +17,8 @@
 <script>
 export default {
   name: "HomeRecommend",
-  data() {
-    return {
-      list: [
-        {
-          id: "0001",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1412/79/522273acf9c21ad5083144b4985771df.water.jpg_200x200_b604ba19.jpg",
-          title: "西溪国家湿地公园·周家村",
-          desc: "美若仙境，《非诚勿扰》取景地"
-        },
-        {
-          id: "0002",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1412/79/522273acf9c21ad5083144b4985771df.water.jpg_200x200_b604ba19.jpg",
-          title: "西溪国家湿地公园·周家村",
-          desc: "美若仙境，《非诚勿扰》取景地"
-        },
-        {
-          id: "0003",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1412/79/522273acf9c21ad5083144b4985771df.water.jpg_200x200_b604ba19.jpg",
-          title: "西溪国家湿地公园·周家村",
-          desc: "美若仙境，《非诚勿扰》取景地"
-        },
-        {
-          id: "0004",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1412/79/522273acf9c21ad5083144b4985771df.water.jpg_200x200_b604ba19.jpg",
-          title: "西溪国家湿地公园·周家村",
-          desc: "美若仙境，《非诚勿扰》取景地"
-        },
-        {
-          id: "0005",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1412/79/522273acf9c21ad5083144b4985771df.water.jpg_200x200_b604ba19.jpg",
-          title: "西溪国家湿地公园·周家村",
-          desc: "美若仙境，《非诚勿扰》取景地"
-        },
-        {
-          id: "0006",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1412/79/522273acf9c21ad5083144b4985771df.water.jpg_200x200_b604ba19.jpg",
-          title: "西溪国家湿地公园·周家村",
-          desc: "美若仙境，《非诚勿扰》取景地"
-        }
-      ]
-    };
+  props: {
+    list: Array
   }
 };
 </script>

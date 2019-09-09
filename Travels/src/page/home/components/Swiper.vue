@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="showSwiper">
       <!-- slides -->
-      <swiper-slide class="swiper-img" v-for="item in swiperList" :key="item.id">
+      <swiper-slide class="swiper-img" v-for="item in list" :key="item.id">
         <img :src="item.imgUrl" alt />
       </swiper-slide>
 
@@ -15,30 +15,21 @@
 <script>
 export default {
   name: "HomeSwiper",
+  props: {
+    list: Array
+  },
   data() {
     return {
       swiperOption: {
         pagination: ".swiper-pagination",
         loop: true
-      },
-      swiperList: [
-        {
-          id: "0001",
-          imgUrl:
-            "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg"
-        },
-        {
-          id: "0002",
-          imgUrl:
-            "https://img1.qunarzz.com/order/comp/1805/2e/6e407f088bfb902.png"
-        },
-        {
-          id: "0003",
-          imgUrl:
-            "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/0b0622e5b6ac5fbed3084dd2832e6f8f.jpg_750x200_895321b6.jpg"
-        }
-      ]
+      }
     };
+  },
+  computed: {
+    showSwiper() {
+      return this.list.length;
+    }
   }
 };
 </script>
@@ -46,6 +37,8 @@ export default {
 <style lang='stylus' scoped>
 .wrapper >>> .swiper-pagination-bullet-active
   background: #fff !important
+.wrapper >>> .swiper-container-horizontal > .swiper-pagination-bullets
+  bottom: 30px
 .wrapper
   overflow: hidden
   width: 100%
