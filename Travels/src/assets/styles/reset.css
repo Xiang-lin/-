@@ -96,7 +96,7 @@ video {
 
 /* HTML5 display-role reset for older browsers */
 html {
-  font-size: 50px;
+  font-size: 50px !important;
 }
 article,
 aside,

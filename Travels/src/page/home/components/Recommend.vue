@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~styles/mixins.styl'
 .title
   margin-top: 0.2rem
   line-height: 0.8rem
@@ -47,18 +48,12 @@ export default {
     .item-title
       line-height: 0.54rem
       font-size: 0.32rem
-      text-overflow: ellipsis
-      display: -webkit-box
-      -webkit-line-clamp: 1
-      -webkit-box-orient: vertical
+      ellipsis()
     .item-desc
       line-height: 0.4rem
       color: #ccc
       overflow: hidden
-      text-overflow: ellipsis
-      display: -webkit-box
-      -webkit-line-clamp: 1
-      -webkit-box-orient: vertical
+      ellipsis()
     .item-button
       line-height: 0.44rem
       margin-top: 0.16rem
