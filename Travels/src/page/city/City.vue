@@ -2,8 +2,12 @@
   <div>
     <CityHeader></CityHeader>
     <CitySearch></CitySearch>
-    <CityList :cities="cities" :hotCities="hotCities"></CityList>
-    <CityAlphabet :cities="cities"></CityAlphabet>
+    <!-- 向子组件传值 -->
+    <CityList :cities="cities" :hotCities="hotCities" :letter="letter"></CityList>
+    <!-- 子组件传值 change事件 letter的值
+        向子组件传值 cities 请求到的json数据
+    -->
+    <CityAlphabet :cities="cities" @change="handleLetterChange"></CityAlphabet>
   </div>
 </template>
 
@@ -23,11 +27,15 @@ export default {
   },
   data() {
     return {
+      // 请求的json数据
       cities: {},
-      hotCities: []
+      hotCities: [],
+      // 创建letter Alphabet传来的值赋予,再传给List组件
+      letter: ""
     };
   },
   methods: {
+    // axios请求数据
     getCityInfo() {
       axios.get("/api/city.json").then(this.handleGetCityInfosucc);
     },
@@ -38,9 +46,13 @@ export default {
         this.cities = data.cities;
         this.hotCities = data.hotCities;
       }
+    },
+    handleLetterChange(letter) {
+      this.letter = letter;
     }
   },
   mounted() {
+    // 加载完成后,调用请求数据方法
     this.getCityInfo();
   }
 };

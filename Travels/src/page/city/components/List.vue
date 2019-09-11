@@ -9,17 +9,21 @@
           </div>
         </div>
       </div>
-
+      <!-- 热门城市 -->
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
+          <!-- 父组件axios得到json值,props接收后,直接调用 -->
           <div class="button-wrapper" v-for="item in hotCities" :key="item.id">
             <div class="button">{{item.name}}</div>
           </div>
         </div>
       </div>
+      <!-- 城市名称
+        父组件axios得到json值,props接收后,直接调用 
+      -->
 
-      <div class="area" v-for="(itme,key) in cities" :key="key">
+      <div class="area" v-for="(itme,key) in cities" :key="key" :ref="key">
         <div class="title border-topbottom">{{key}}</div>
         <div class="item-list">
           <div
@@ -38,14 +42,27 @@ import betterScoll from "better-scroll";
 export default {
   name: "CityList",
   props: {
+    // 接收json值
     hotCities: Array,
-    cities: Object
+    cities: Object,
+    // 接收兄弟组件的传值,通过父组件传来的letter值
+    letter: String
   },
   data() {
     return {};
   },
+  // 使用better插件
   mounted() {
     this.scroll = new betterScoll(this.$refs.wrapper);
+  },
+  // 监听从父组件接受的letter的值得变化
+  watch: {
+    letter() {
+      if (this.letter) {
+        const element = this.$refs[this.letter][0];
+        this.scroll.scrollToElement(element);
+      }
+    }
   }
 };
 </script>
