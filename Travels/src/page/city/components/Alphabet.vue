@@ -36,7 +36,7 @@ export default {
       timer: null
     };
   },
-  updata() {
+  updated() {
     //   当数据更新时,更新距离盒子高度
     this.startY = this.$refs["A"][0].offsetTop;
   },

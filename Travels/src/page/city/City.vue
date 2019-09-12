@@ -1,7 +1,7 @@
 <template>
   <div>
     <CityHeader></CityHeader>
-    <CitySearch></CitySearch>
+    <CitySearch :cities="cities"></CitySearch>
     <!-- 向子组件传值 -->
     <CityList :cities="cities" :hotCities="hotCities" :letter="letter"></CityList>
     <!-- 子组件传值 change事件 letter的值
