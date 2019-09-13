@@ -5,7 +5,7 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">北京</div>
+            <div class="button">{{this.currentCity}}</div>
           </div>
         </div>
       </div>
@@ -14,7 +14,12 @@
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
           <!-- 父组件axios得到json值,props接收后,直接调用 -->
-          <div class="button-wrapper" v-for="item in hotCities" :key="item.id">
+          <div
+            class="button-wrapper"
+            v-for="item in hotCities"
+            :key="item.id"
+            @click="handleCityClick(item.name)"
+          >
             <div class="button">{{item.name}}</div>
           </div>
         </div>
@@ -30,6 +35,7 @@
             class="item border-bottom"
             v-for="innerItem in itme"
             :key="innerItem.id"
+            @click="handleCityClick(innerItem.name)"
           >{{innerItem.name}}</div>
         </div>
       </div>
@@ -39,6 +45,7 @@
 
 <script>
 import betterScoll from "better-scroll";
+import { mapState, mapMutations } from "vuex";
 export default {
   name: "CityList",
   props: {
@@ -48,12 +55,21 @@ export default {
     // 接收兄弟组件的传值,通过父组件传来的letter值
     letter: String
   },
+  computed: {
+    ...mapState({
+      currentCity: "city"
+    })
+  },
   data() {
     return {};
   },
   // 使用better插件
-  mounted() {
-    this.scroll = new betterScoll(this.$refs.wrapper);
+  methods: {
+    handleCityClick(city) {
+      this.changeCity(city);
+      this.$router.push("/");
+    },
+    ...mapMutations(["changeCity"])
   },
   // 监听从父组件接受的letter的值得变化
   watch: {
@@ -63,6 +79,9 @@ export default {
         this.scroll.scrollToElement(element);
       }
     }
+  },
+  mounted() {
+    this.scroll = new betterScoll(this.$refs.wrapper);
   }
 };
 </script>

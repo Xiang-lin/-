@@ -3,6 +3,7 @@
 import Vue from "vue";
 import App from "./App";
 import router from "./router";
+import store from './store'
 // 重置css文件
 import "styles/reset.css";
 // iconfont css
@@ -21,6 +22,7 @@ Vue.config.productionTip = false;
 new Vue({
   el: "#app",
   router,
+  store,
   components: { App },
   template: "<App/>"
 });

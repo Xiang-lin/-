@@ -17,12 +17,14 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from "vuex";
 export default {
   name: "headers",
-  props: {
-    city: String
-  },
   methods: {},
+  computed: {
+    ...mapState(["city"]),
+    ...mapGetters(["doubleCity"])
+  },
   component: {}
 };
 </script>
@@ -54,7 +56,8 @@ export default {
     .search
       font-size: 0.4rem
   .header-right
-    width: 1.24rem
+    min-width: 1.04rem
+    padding: 0 0.1rem
     text-align: center
     float: right
     color: #fff
